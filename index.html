@@ -375,6 +375,7 @@
     padding: 36px 44px;
     box-shadow: var(--shadow-sm);
   }
+  .content + .content { margin-top: 28px; }
   .content > *:first-child { margin-top: 0; }
   .content > *:last-child { margin-bottom: 0; }
 
@@ -452,6 +453,8 @@
     padding: 14px 18px;
     margin: 16px 0 22px;
     overflow-x: auto;
+    -moz-tab-size: 2;
+    tab-size: 2;
     font-family: 'JetBrains Mono', ui-monospace, monospace;
     font-size: 12.5px;
     line-height: 1.6;
@@ -593,12 +596,12 @@
         </svg>
         <span>Copy Skill</span>
       </button>
-      <button class="chrome-btn is-primary" id="download-skill-btn" type="button" aria-label="Download skill as markdown">
+      <button class="chrome-btn is-primary" id="download-skill-btn" type="button" aria-label="Download the skill bundle as a zip">
         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M8 2v8m0 0L5 7m3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M2.5 11.5v1A1.5 1.5 0 0 0 4 14h8a1.5 1.5 0 0 0 1.5-1.5v-1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
-        <span>Download Skill</span>
+        <span>Download .zip</span>
       </button>
     </div>
   </div>
@@ -938,6 +941,356 @@ dataforseo:dataforseo_labs_google_domain_rank_overview(target: "[domain]")</code
       <li>Full methodology: <a href="https://www.exaltgrowth.com/methodology">www.exaltgrowth.com/methodology</a></li>
       <li>Proof of Importance research: <a href="https://www.exaltgrowth.com/generative-engine-optimization/how-llms-decide-what-to-cite">www.exaltgrowth.com/generative-engine-optimization/how-llms-decide-what-to-cite</a></li>
     </ul>
+
+  </article>
+
+  <article class="content">
+
+    <h1>Tool Reference</h1>
+    <p>Complete mapping of tools to audit phases. Bundled with the skill as <code>references/tool-reference.md</code>.</p>
+
+    <h2>GSC MCP Tools</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Tool</th><th>Phase</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td><code>gsc:site_snapshot</code></td><td>1a</td><td>Performance overview with period comparison</td></tr>
+        <tr><td><code>gsc:check_alerts</code></td><td>1b</td><td>Position drops, CTR collapses, disappearances</td></tr>
+        <tr><td><code>gsc:traffic_drops</code></td><td>1c</td><td>Pages that lost the most traffic</td></tr>
+        <tr><td><code>gsc:content_decay</code></td><td>1d</td><td>Consistent multi-period decline</td></tr>
+        <tr><td><code>gsc:quick_wins</code></td><td>1e</td><td>Keywords positions 4 to 15</td></tr>
+        <tr><td><code>gsc:ctr_opportunities</code></td><td>1f</td><td>High impressions, low CTR</td></tr>
+        <tr><td><code>gsc:ctr_vs_benchmark</code></td><td>1g</td><td>CTR vs industry benchmarks</td></tr>
+        <tr><td><code>gsc:cannibalization_check</code></td><td>1h</td><td>Internal keyword competition</td></tr>
+        <tr><td><code>gsc:content_recommendations</code></td><td>1i</td><td>Cross-referenced content actions</td></tr>
+        <tr><td><code>gsc:list_sitemaps</code></td><td>1j</td><td>Sitemap health</td></tr>
+        <tr><td><code>gsc:inspect_url</code></td><td>2c</td><td>Per-URL index status</td></tr>
+        <tr><td><code>gsc:generate_report</code></td><td>All</td><td>Comprehensive report (can replace individual Phase 1 calls)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Firecrawl Tools</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Tool</th><th>Phase</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td><code>firecrawl_map</code></td><td>2a</td><td>URL discovery across full site</td></tr>
+        <tr><td><code>firecrawl_scrape</code></td><td>2b</td><td>Page-level content + HTML extraction</td></tr>
+        <tr><td><code>firecrawl_crawl</code></td><td>2b</td><td>Multi-page crawl for deep tier</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>DataForSEO Tools</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Tool</th><th>Phase</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td><code>on_page_lighthouse</code></td><td>2e</td><td>Core Web Vitals / Lighthouse audit</td></tr>
+        <tr><td><code>on_page_content_parsing</code></td><td>2b</td><td>Content parsing fallback</td></tr>
+        <tr><td><code>backlinks_bulk_backlinks</code></td><td>4a</td><td>Total backlink count</td></tr>
+        <tr><td><code>backlinks_bulk_referring_domains</code></td><td>4a</td><td>Referring domain count</td></tr>
+        <tr><td><code>backlinks_domain_pages_summary</code></td><td>4b</td><td>Per-page link distribution</td></tr>
+        <tr><td><code>backlinks_anchors</code></td><td>4c</td><td>Anchor text analysis</td></tr>
+        <tr><td><code>backlinks_bulk_new_lost_backlinks</code></td><td>4d</td><td>Link velocity</td></tr>
+        <tr><td><code>backlinks_backlinks</code></td><td>4e</td><td>Individual backlink details (deep)</td></tr>
+        <tr><td><code>backlinks_bulk_ranks</code></td><td>4a</td><td>Domain rank scores</td></tr>
+        <tr><td><code>backlinks_bulk_spam_score</code></td><td>4e</td><td>Spam assessment (deep)</td></tr>
+        <tr><td><code>kw_data_google_ads_search_volume</code></td><td>5a</td><td>Brand search volume</td></tr>
+        <tr><td><code>serp_organic_live_advanced</code></td><td>6a</td><td>SERP features, AI Overview detection</td></tr>
+        <tr><td><code>dataforseo_labs_google_ranked_keywords</code></td><td>1 fallback</td><td>Ranked keywords (no GSC)</td></tr>
+        <tr><td><code>dataforseo_labs_google_domain_rank_overview</code></td><td>1 fallback</td><td>Domain overview (no GSC)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>InfraNodus Tools</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Tool</th><th>Phase</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td><code>generate_knowledge_graph</code></td><td>3a</td><td>Topical coverage analysis, entity extraction</td></tr>
+        <tr><td><code>generate_topical_clusters</code></td><td>3a</td><td>Compact cluster extraction</td></tr>
+        <tr><td><code>generate_content_gaps</code></td><td>3d</td><td>Content gaps between clusters</td></tr>
+        <tr><td><code>search_queries_vs_search_results</code></td><td>3d</td><td>Supply-demand gap analysis</td></tr>
+        <tr><td><code>analyze_google_search_results</code></td><td>3d</td><td>SERP landscape for target queries</td></tr>
+        <tr><td><code>generate_seo_report</code></td><td>3a</td><td>Full SEO report (alternative to manual analysis)</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Notion Tools</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Tool</th><th>Phase</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td><code>notion-create-pages</code></td><td>7</td><td>Publish audit to Notion</td></tr>
+        <tr><td><code>notion-fetch</code></td><td>7</td><td>Verify parent page exists</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>Tool Loading</h2>
+    <p>All tools except Notion require <code>tool_search</code> to load before first use. Run <code>tool_search</code> for each tool family at the start of the audit:</p>
+    <pre><code>tool_search("GSC site snapshot traffic")
+tool_search("firecrawl crawl scrape")
+tool_search("dataforseo backlinks")
+tool_search("infranodus knowledge graph")</code></pre>
+
+  </article>
+
+  <article class="content">
+
+    <h1>Notion Output Template</h1>
+    <p>The exact template structure used when writing the audit to Notion. Bundled with the skill as <code>references/notion-template.md</code>. Adapt section depth based on tier.</p>
+
+    <h2>Markdown Syntax Notes</h2>
+    <ul>
+      <li>Callouts: <code>&lt;callout icon="emoji" color="color_bg"&gt;</code> with content indented by a tab</li>
+      <li>Background colors: <code>green_bg</code>, <code>blue_bg</code>, <code>purple_bg</code>, <code>orange_bg</code>, <code>red_bg</code></li>
+      <li>Inline colors: <code>&lt;span color="gray"&gt;text&lt;/span&gt;</code></li>
+      <li>Dividers: <code>---</code></li>
+      <li>Checkboxes: <code>- [ ]</code></li>
+      <li>Standard markdown for bold, links, lists, tables</li>
+    </ul>
+
+    <h2>Health Score Calculation</h2>
+    <p>Weighted composite of 6 components (0 to 100):</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Component</th><th>Weight</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td>GSC performance trend</td><td>20%</td><td>Phase 1 snapshot YoY change</td></tr>
+        <tr><td>Index health</td><td>15%</td><td>Phase 2 index status distribution</td></tr>
+        <tr><td>Technical hygiene</td><td>15%</td><td>Phase 2 technical checks (canonical, robots, redirects, CWV)</td></tr>
+        <tr><td>Content quality</td><td>20%</td><td>Phase 3 topical coverage, E-E-A-T, freshness</td></tr>
+        <tr><td>Link profile health</td><td>15%</td><td>Phase 4 velocity, anchor distribution, quality</td></tr>
+        <tr><td>Entity architecture</td><td>15%</td><td>Phase 5 schema, brand signals, consistency</td></tr>
+      </tbody>
+    </table></div>
+    <p>Score conservatively. 80+ means strong fundamentals with minor gaps. Most SaaS sites score 40 to 65.</p>
+
+    <h2>Template</h2>
+    <pre><code>&lt;callout icon="📊" color="[green_bg if health &gt;= 80 | orange_bg if 50-79 | red_bg if &lt; 50]"&gt;
+	**SEO Audit: [Domain]**
+	**Health Score:** [X]/100
+	**Tier:** [light | standard | deep]
+	**Date:** [today's date]
+	**GSC Connected:** [Yes/No]
+&lt;/callout&gt;
+
+---
+
+## Executive Summary
+
+[3 to 5 sentences. The headline finding, the biggest risk, the biggest opportunity, and the single highest-impact recommendation. Front-load the sharpest diagnostic.]
+
+---
+
+## Performance Snapshot
+
+| Metric | Current (90d) | Prior (90d) | Change |
+|---|---|---|---|
+| Clicks | | | |
+| Impressions | | | |
+| CTR | | | |
+| Avg Position | | | |
+
+### By Segment
+
+| Segment | Clicks | Impressions | CTR | Avg Position | Trend |
+|---|---|---|---|---|---|
+| Brand | | | | | |
+| Non-brand | | | | | |
+| Product/service | | | | | |
+| Blog/resources | | | | | |
+
+---
+
+## Critical Alerts
+
+&lt;callout icon="🚨" color="red_bg"&gt;
+	[List position drops, CTR collapses, pages that disappeared. Each with specific numbers.]
+&lt;/callout&gt;
+
+---
+
+## Quick Wins
+
+| Query | Current Position | Impressions | Opportunity | Recommended Action |
+|---|---|---|---|---|
+| | | | | |
+
+---
+
+## Traffic Drops
+
+| Page | Click Drop | Diagnosis | Priority |
+|---|---|---|---|
+| | | [Ranking loss / CTR collapse / Demand decline] | |
+
+---
+
+## Content Decay
+
+| Page | Period 1 | Period 2 | Period 3 | Severity |
+|---|---|---|---|---|
+| | | | | |
+
+---
+
+## Cannibalization Issues
+
+| Query | Page A | Page B | Combined Impressions | Recommendation |
+|---|---|---|---|---|
+| | | | | [Consolidate / Differentiate / Redirect] |
+
+---
+
+## Technical Findings
+
+### Index Health
+
+| Status | Count | % of Total |
+|---|---|---|
+| Healthy | | |
+| Weak | | |
+| Dead | | |
+| Blocked | | |
+
+### Technical Issues
+
+| Issue | Severity | Affected URLs | Fix |
+|---|---|---|---|
+| | [Critical/High/Medium/Low] | [count] | |
+
+### Structured Data
+
+| Schema Type | Pages Present | Validation Status | Issues |
+|---|---|---|---|
+| | | | |
+
+### Core Web Vitals (standard+ tier)
+
+| Page | LCP | CLS | INP | Status |
+|---|---|---|---|---|
+| | | | | [Pass/Fail] |
+
+---
+
+## Content Audit
+
+### Topical Coverage
+
+[InfraNodus cluster summary. Which topics are well-covered vs thin.]
+
+### Content Quality Flags
+
+| Page | Issue | Evidence | Recommended Fix |
+|---|---|---|---|
+| | [Low E-E-A-T / Thin content / Query dilution / Stale] | [specific observation] | |
+
+### Content Gaps
+
+| Topic/Query | Search Volume | Current Coverage | Opportunity |
+|---|---|---|---|
+| | | [None / Thin / Misaligned] | |
+
+---
+
+## Link Profile
+
+| Metric | Value |
+|---|---|
+| Total backlinks | |
+| Referring domains | |
+| Dofollow ratio | |
+| New links (30d) | |
+| Lost links (30d) | |
+| Net link velocity | |
+
+### Anchor Distribution
+
+| Anchor Type | % Share | Assessment |
+|---|---|---|
+| Branded | | |
+| Exact match | | |
+| Generic | | |
+| URL | | |
+
+### Link Concentration
+
+| Page | Backlinks | % of Total | Risk |
+|---|---|---|---|
+| | | | |
+
+---
+
+## Brand &amp; Entity
+
+| Signal | Status | Notes |
+|---|---|---|
+| Brand search volume | | |
+| Organization schema | | [Complete / Partial / Missing] |
+| sameAs coverage | | |
+| Review presence | | |
+| Trust signals | | |
+| Entity consistency | | |
+
+---
+
+## SERP Impact
+
+### AI Overview Exposure
+
+| Query | Impressions | AI Overview? | Site Cited? | Gap? |
+|---|---|---|---|---|
+| | | | | |
+
+### Click Gap Analysis
+
+| Query | Expected Clicks (by position) | Actual Clicks | Gap | Likely Cause |
+|---|---|---|---|---|
+| | | | | |
+
+---
+
+## Prioritized Action Plan
+
+### Quick Wins (1 week)
+
+- [ ] [Specific action with affected URL and expected impact]
+
+### Short-term (2 to 4 weeks)
+
+- [ ] [Specific action]
+
+### Medium-term (1 to 3 months)
+
+- [ ] [Specific action]
+
+### Strategic (3 to 6 months)
+
+- [ ] [Specific action]
+
+---
+
+## Framework Alignment
+
+### PoI Signal Gaps
+
+| Signal | Strength | Notes |
+|---|---|---|
+| Semantic Relevance | [Strong/Moderate/Weak] | |
+| Source Authority | | |
+| Entity Relationships | | |
+| Evidence Density | | |
+| Recency | | |
+| Structural Accessibility | | |
+| Corroboration | | |
+
+### Entity-First Pillar Gaps
+
+| Pillar | Status | Key Issue |
+|---|---|---|
+| Foundation | | |
+| Structure | | |
+| Signals | | |
+| Measurement | | |
+
+---
+
+&lt;span color="gray"&gt;Generated by SEO Audit skill | [Date] | Tier: [tier]&lt;/span&gt;</code></pre>
 
   </article>
 
@@ -1293,21 +1646,377 @@ Sound like a senior SEO strategist delivering a diagnostic, not a tool regurgita
 - Treating AI search as monolithic. Each platform has distinct retrieval layers.
 </script>
 
+<script id="tool-reference-source" type="text/markdown"># Tool Reference
+
+Complete mapping of tools to audit phases.
+
+## GSC MCP Tools
+
+| Tool | Phase | Purpose |
+|---|---|---|
+| `gsc:site_snapshot` | 1a | Performance overview with period comparison |
+| `gsc:check_alerts` | 1b | Position drops, CTR collapses, disappearances |
+| `gsc:traffic_drops` | 1c | Pages that lost the most traffic |
+| `gsc:content_decay` | 1d | Consistent multi-period decline |
+| `gsc:quick_wins` | 1e | Keywords positions 4 to 15 |
+| `gsc:ctr_opportunities` | 1f | High impressions, low CTR |
+| `gsc:ctr_vs_benchmark` | 1g | CTR vs industry benchmarks |
+| `gsc:cannibalization_check` | 1h | Internal keyword competition |
+| `gsc:content_recommendations` | 1i | Cross-referenced content actions |
+| `gsc:list_sitemaps` | 1j | Sitemap health |
+| `gsc:inspect_url` | 2c | Per-URL index status |
+| `gsc:generate_report` | All | Comprehensive report (can replace individual Phase 1 calls) |
+
+## Firecrawl Tools
+
+| Tool | Phase | Purpose |
+|---|---|---|
+| `firecrawl_map` | 2a | URL discovery across full site |
+| `firecrawl_scrape` | 2b | Page-level content + HTML extraction |
+| `firecrawl_crawl` | 2b | Multi-page crawl for deep tier |
+
+## DataForSEO Tools
+
+| Tool | Phase | Purpose |
+|---|---|---|
+| `on_page_lighthouse` | 2e | Core Web Vitals / Lighthouse audit |
+| `on_page_content_parsing` | 2b | Content parsing fallback |
+| `backlinks_bulk_backlinks` | 4a | Total backlink count |
+| `backlinks_bulk_referring_domains` | 4a | Referring domain count |
+| `backlinks_domain_pages_summary` | 4b | Per-page link distribution |
+| `backlinks_anchors` | 4c | Anchor text analysis |
+| `backlinks_bulk_new_lost_backlinks` | 4d | Link velocity |
+| `backlinks_backlinks` | 4e | Individual backlink details (deep) |
+| `backlinks_bulk_ranks` | 4a | Domain rank scores |
+| `backlinks_bulk_spam_score` | 4e | Spam assessment (deep) |
+| `kw_data_google_ads_search_volume` | 5a | Brand search volume |
+| `serp_organic_live_advanced` | 6a | SERP features, AI Overview detection |
+| `dataforseo_labs_google_ranked_keywords` | 1 fallback | Ranked keywords (no GSC) |
+| `dataforseo_labs_google_domain_rank_overview` | 1 fallback | Domain overview (no GSC) |
+
+## InfraNodus Tools
+
+| Tool | Phase | Purpose |
+|---|---|---|
+| `generate_knowledge_graph` | 3a | Topical coverage analysis, entity extraction |
+| `generate_topical_clusters` | 3a | Compact cluster extraction |
+| `generate_content_gaps` | 3d | Content gaps between clusters |
+| `search_queries_vs_search_results` | 3d | Supply-demand gap analysis |
+| `analyze_google_search_results` | 3d | SERP landscape for target queries |
+| `generate_seo_report` | 3a | Full SEO report (alternative to manual analysis) |
+
+## Notion Tools
+
+| Tool | Phase | Purpose |
+|---|---|---|
+| `notion-create-pages` | 7 | Publish audit to Notion |
+| `notion-fetch` | 7 | Verify parent page exists |
+
+## Tool Loading
+
+All tools except Notion require `tool_search` to load before first use. Run `tool_search` for each tool family at the start of the audit:
+
+```
+tool_search("GSC site snapshot traffic")
+tool_search("firecrawl crawl scrape")
+tool_search("dataforseo backlinks")
+tool_search("infranodus knowledge graph")
+```
+</script>
+
+<script id="notion-template-source" type="text/markdown"># Notion Output Template
+
+Use this exact template structure when writing the audit to Notion. Adapt section depth based on tier.
+
+## Markdown Syntax Notes
+
+- Callouts: `<callout icon="emoji" color="color_bg">` with content indented by a tab
+- Background colors: `green_bg`, `blue_bg`, `purple_bg`, `orange_bg`, `red_bg`
+- Inline colors: `<span color="gray">text</span>`
+- Dividers: `---`
+- Checkboxes: `- [ ]`
+- Standard markdown for bold, links, lists, tables
+
+## Health Score Calculation
+
+Weighted composite of 6 components (0 to 100):
+
+| Component | Weight | Source |
+|---|---|---|
+| GSC performance trend | 20% | Phase 1 snapshot YoY change |
+| Index health | 15% | Phase 2 index status distribution |
+| Technical hygiene | 15% | Phase 2 technical checks (canonical, robots, redirects, CWV) |
+| Content quality | 20% | Phase 3 topical coverage, E-E-A-T, freshness |
+| Link profile health | 15% | Phase 4 velocity, anchor distribution, quality |
+| Entity architecture | 15% | Phase 5 schema, brand signals, consistency |
+
+Score conservatively. 80+ means strong fundamentals with minor gaps. Most SaaS sites score 40 to 65.
+
+## Template
+
+```markdown
+<callout icon="📊" color="[green_bg if health >= 80 | orange_bg if 50-79 | red_bg if < 50]">
+	**SEO Audit: [Domain]**
+	**Health Score:** [X]/100
+	**Tier:** [light | standard | deep]
+	**Date:** [today's date]
+	**GSC Connected:** [Yes/No]
+</callout>
+
+---
+
+## Executive Summary
+
+[3 to 5 sentences. The headline finding, the biggest risk, the biggest opportunity, and the single highest-impact recommendation. Front-load the sharpest diagnostic.]
+
+---
+
+## Performance Snapshot
+
+| Metric | Current (90d) | Prior (90d) | Change |
+|---|---|---|---|
+| Clicks | | | |
+| Impressions | | | |
+| CTR | | | |
+| Avg Position | | | |
+
+### By Segment
+
+| Segment | Clicks | Impressions | CTR | Avg Position | Trend |
+|---|---|---|---|---|---|
+| Brand | | | | | |
+| Non-brand | | | | | |
+| Product/service | | | | | |
+| Blog/resources | | | | | |
+
+---
+
+## Critical Alerts
+
+<callout icon="🚨" color="red_bg">
+	[List position drops, CTR collapses, pages that disappeared. Each with specific numbers.]
+</callout>
+
+---
+
+## Quick Wins
+
+| Query | Current Position | Impressions | Opportunity | Recommended Action |
+|---|---|---|---|---|
+| | | | | |
+
+---
+
+## Traffic Drops
+
+| Page | Click Drop | Diagnosis | Priority |
+|---|---|---|---|
+| | | [Ranking loss / CTR collapse / Demand decline] | |
+
+---
+
+## Content Decay
+
+| Page | Period 1 | Period 2 | Period 3 | Severity |
+|---|---|---|---|---|
+| | | | | |
+
+---
+
+## Cannibalization Issues
+
+| Query | Page A | Page B | Combined Impressions | Recommendation |
+|---|---|---|---|---|
+| | | | | [Consolidate / Differentiate / Redirect] |
+
+---
+
+## Technical Findings
+
+### Index Health
+
+| Status | Count | % of Total |
+|---|---|---|
+| Healthy | | |
+| Weak | | |
+| Dead | | |
+| Blocked | | |
+
+### Technical Issues
+
+| Issue | Severity | Affected URLs | Fix |
+|---|---|---|---|
+| | [Critical/High/Medium/Low] | [count] | |
+
+### Structured Data
+
+| Schema Type | Pages Present | Validation Status | Issues |
+|---|---|---|---|
+| | | | |
+
+### Core Web Vitals (standard+ tier)
+
+| Page | LCP | CLS | INP | Status |
+|---|---|---|---|---|
+| | | | | [Pass/Fail] |
+
+---
+
+## Content Audit
+
+### Topical Coverage
+
+[InfraNodus cluster summary. Which topics are well-covered vs thin.]
+
+### Content Quality Flags
+
+| Page | Issue | Evidence | Recommended Fix |
+|---|---|---|---|
+| | [Low E-E-A-T / Thin content / Query dilution / Stale] | [specific observation] | |
+
+### Content Gaps
+
+| Topic/Query | Search Volume | Current Coverage | Opportunity |
+|---|---|---|---|
+| | | [None / Thin / Misaligned] | |
+
+---
+
+## Link Profile
+
+| Metric | Value |
+|---|---|
+| Total backlinks | |
+| Referring domains | |
+| Dofollow ratio | |
+| New links (30d) | |
+| Lost links (30d) | |
+| Net link velocity | |
+
+### Anchor Distribution
+
+| Anchor Type | % Share | Assessment |
+|---|---|---|
+| Branded | | |
+| Exact match | | |
+| Generic | | |
+| URL | | |
+
+### Link Concentration
+
+| Page | Backlinks | % of Total | Risk |
+|---|---|---|---|
+| | | | |
+
+---
+
+## Brand & Entity
+
+| Signal | Status | Notes |
+|---|---|---|
+| Brand search volume | | |
+| Organization schema | | [Complete / Partial / Missing] |
+| sameAs coverage | | |
+| Review presence | | |
+| Trust signals | | |
+| Entity consistency | | |
+
+---
+
+## SERP Impact
+
+### AI Overview Exposure
+
+| Query | Impressions | AI Overview? | Site Cited? | Gap? |
+|---|---|---|---|---|
+| | | | | |
+
+### Click Gap Analysis
+
+| Query | Expected Clicks (by position) | Actual Clicks | Gap | Likely Cause |
+|---|---|---|---|---|
+| | | | | |
+
+---
+
+## Prioritized Action Plan
+
+### Quick Wins (1 week)
+
+- [ ] [Specific action with affected URL and expected impact]
+
+### Short-term (2 to 4 weeks)
+
+- [ ] [Specific action]
+
+### Medium-term (1 to 3 months)
+
+- [ ] [Specific action]
+
+### Strategic (3 to 6 months)
+
+- [ ] [Specific action]
+
+---
+
+## Framework Alignment
+
+### PoI Signal Gaps
+
+| Signal | Strength | Notes |
+|---|---|---|
+| Semantic Relevance | [Strong/Moderate/Weak] | |
+| Source Authority | | |
+| Entity Relationships | | |
+| Evidence Density | | |
+| Recency | | |
+| Structural Accessibility | | |
+| Corroboration | | |
+
+### Entity-First Pillar Gaps
+
+| Pillar | Status | Key Issue |
+|---|---|---|
+| Foundation | | |
+| Structure | | |
+| Signals | | |
+| Measurement | | |
+
+---
+
+<span color="gray">Generated by SEO Audit skill | [Date] | Tier: [tier]</span>
+```
+</script>
+
 <script>
   (function () {
-    const source = document.getElementById('skill-source').textContent.replace(/^\n/, '');
+    const mdFromEl = (id) => document.getElementById(id).textContent.replace(/^\n/, '');
+    const skillMd = mdFromEl('skill-source');
+
     const copyBtn = document.getElementById('copy-skill-btn');
     const downloadBtn = document.getElementById('download-skill-btn');
     const copyLabel = copyBtn.querySelector('span');
+    const downloadLabel = downloadBtn.querySelector('span');
     const originalCopyLabel = copyLabel.textContent;
+    const originalDownloadLabel = downloadLabel.textContent;
+
+    function flash(btn, label, original, text) {
+      btn.classList.add('is-success');
+      label.textContent = text;
+      setTimeout(() => { btn.classList.remove('is-success'); label.textContent = original; }, 1600);
+    }
+    function flashError(label, original, text) {
+      label.textContent = text;
+      setTimeout(() => { label.textContent = original; }, 1600);
+    }
 
     async function copySkill() {
       try {
         if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(source);
+          await navigator.clipboard.writeText(skillMd);
         } else {
           const ta = document.createElement('textarea');
-          ta.value = source;
+          ta.value = skillMd;
           ta.style.position = 'fixed';
           ta.style.opacity = '0';
           document.body.appendChild(ta);
@@ -1315,32 +2024,96 @@ Sound like a senior SEO strategist delivering a diagnostic, not a tool regurgita
           document.execCommand('copy');
           document.body.removeChild(ta);
         }
-        copyBtn.classList.add('is-success');
-        copyLabel.textContent = 'Copied';
-        setTimeout(() => {
-          copyBtn.classList.remove('is-success');
-          copyLabel.textContent = originalCopyLabel;
-        }, 1600);
+        flash(copyBtn, copyLabel, originalCopyLabel, 'Copied');
       } catch (err) {
-        copyLabel.textContent = 'Copy failed';
-        setTimeout(() => { copyLabel.textContent = originalCopyLabel; }, 1600);
+        flashError(copyLabel, originalCopyLabel, 'Copy failed');
       }
     }
 
-    function downloadSkill() {
-      const blob = new Blob([source], { type: 'text/markdown;charset=utf-8' });
+    // --- Minimal ZIP writer (store / no compression) ---
+    function crc32(bytes) {
+      let crc = 0xFFFFFFFF;
+      for (let i = 0; i < bytes.length; i++) {
+        crc ^= bytes[i];
+        for (let j = 0; j < 8; j++) crc = (crc >>> 1) ^ (0xEDB88320 & -(crc & 1));
+      }
+      return (crc ^ 0xFFFFFFFF) >>> 0;
+    }
+    function makeZip(files) {
+      const enc = new TextEncoder();
+      const u16 = (n) => [n & 255, (n >>> 8) & 255];
+      const u32 = (n) => [n & 255, (n >>> 8) & 255, (n >>> 16) & 255, (n >>> 24) & 255];
+      const out = [];
+      const central = [];
+      let offset = 0;
+      const put = (arr) => { for (let i = 0; i < arr.length; i++) out.push(arr[i]); offset += arr.length; };
+
+      for (const f of files) {
+        const name = enc.encode(f.name);
+        const data = enc.encode(f.data);
+        const crc = crc32(data);
+        const here = offset;
+        put(u32(0x04034b50));
+        put(u16(20)); put(u16(0)); put(u16(0));      // version, flags, method=store
+        put(u16(0)); put(u16(0x21));                  // mod time, mod date (1980-01-01)
+        put(u32(crc)); put(u32(data.length)); put(u32(data.length));
+        put(u16(name.length)); put(u16(0));
+        put(name); put(data);
+
+        const c = [];
+        const cp = (arr) => { for (let i = 0; i < arr.length; i++) c.push(arr[i]); };
+        cp(u32(0x02014b50));
+        cp(u16(20)); cp(u16(20)); cp(u16(0)); cp(u16(0));
+        cp(u16(0)); cp(u16(0x21));
+        cp(u32(crc)); cp(u32(data.length)); cp(u32(data.length));
+        cp(u16(name.length)); cp(u16(0)); cp(u16(0));
+        cp(u16(0)); cp(u16(0)); cp(u32(0));
+        cp(u32(here));
+        cp(name);
+        central.push(c);
+      }
+
+      const centralStart = offset;
+      for (const c of central) put(c);
+      const centralSize = offset - centralStart;
+
+      put(u32(0x06054b50));
+      put(u16(0)); put(u16(0));
+      put(u16(files.length)); put(u16(files.length));
+      put(u32(centralSize)); put(u32(centralStart));
+      put(u16(0));
+
+      return new Uint8Array(out);
+    }
+
+    function triggerDownload(blob, filename) {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'SKILL.md';
+      a.download = filename;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       setTimeout(() => URL.revokeObjectURL(url), 1000);
     }
 
+    function downloadZip() {
+      try {
+        const files = [
+          { name: 'seo-audit/SKILL.md', data: skillMd },
+          { name: 'seo-audit/references/tool-reference.md', data: mdFromEl('tool-reference-source') },
+          { name: 'seo-audit/references/notion-template.md', data: mdFromEl('notion-template-source') }
+        ];
+        const zip = makeZip(files);
+        triggerDownload(new Blob([zip], { type: 'application/zip' }), 'seo-audit.zip');
+        flash(downloadBtn, downloadLabel, originalDownloadLabel, 'Downloaded');
+      } catch (err) {
+        flashError(downloadLabel, originalDownloadLabel, 'Download failed');
+      }
+    }
+
     copyBtn.addEventListener('click', copySkill);
-    downloadBtn.addEventListener('click', downloadSkill);
+    downloadBtn.addEventListener('click', downloadZip);
   })();
 </script>
 
